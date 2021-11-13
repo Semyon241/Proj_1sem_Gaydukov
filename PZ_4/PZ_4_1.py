@@ -1,7 +1,5 @@
-import math
-
-i = float(input('Введите цену 1 кг конфет: '))
-while type(i) != float:
+i = float(input('Введите цену 1 кг конфет: '))#Ввод переменной
+while type(i) != float:#Обработка исключений
     try:
         i = float(i)
         if i < 0:
@@ -9,4 +7,4 @@ while type(i) != float:
             i = float(input('Введите цену 1 кг конфет заново: '))
     except ValueError:
         print('Введено неверное значение!')
-        i = float(input('Введите цену 1 кг конфет:  '))
+        i = float(input('Введите цену 1 кг конфет:  '))#Ответ
