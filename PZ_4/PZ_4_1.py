@@ -1,10 +1,18 @@
-i = float(input('Введите цену 1 кг конфет: '))#Ввод переменной
-while type(i) != float:#Обработка исключений
+import math
+
+kilogramik = 0.0#Присвоение переменной
+a = (input('Введите цену конфет: '))
+i = 0.0
+while type(a) != float:#Обработка исключений
     try:
-        i = float(i)
-        if i < 0:
-            print('Вы ввели неправильное значение!')
-            i = float(input('Введите цену 1 кг конфет заново: '))
+        a = float(a)
+        if a < 0:
+            print('Введено неверное значение!')
+            a = (input('Введите цену конфет заново: '))
     except ValueError:
         print('Введено неверное значение!')
-        i = float(input('Введите цену 1 кг конфет:  '))#Ответ
+        a = ('Введите вещественное число заново: ')
+while kilogramik <= 0.9:#Начало цикла
+    kilogramik += 0.1
+    i = a*kilogramik
+    print(round(i, 2))#Ответ
